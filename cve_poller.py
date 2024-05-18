@@ -139,7 +139,7 @@ def cvePoller(sender, receivers, smtp_login, smtp_password, smtpsrv, port, tls, 
 						db_result_str+=result
 				if cve_id not in db_result_str:
 					time.sleep(10)
-					nvd_base_url = "https://services.nvd.nist.gov/rest/json/cve/1.0/"
+					nvd_base_url = "https://services.nvd.nist.gov/rest/json/cves/2.0/"
 					nvd_query = nvd_base_url+cve_id
 					nvd_response = requests.get(url=nvd_query)
 					nvd_data = nvd_response.json()
@@ -264,7 +264,7 @@ def cvePoller(sender, receivers, smtp_login, smtp_password, smtpsrv, port, tls, 
 							db_result_str+=result
 					if cve_id not in db_result_str:
 						time.sleep(15)
-						nvd_base_url = "https://services.nvd.nist.gov/rest/json/cve/1.0/"
+						nvd_base_url = "https://services.nvd.nist.gov/rest/json/cves/2.0/"
 						nvd_query = nvd_base_url+cve_id
 						nvd_response = requests.get(url=nvd_query)
 						nvd_data = nvd_response.json()
@@ -373,7 +373,7 @@ def cvePoller(sender, receivers, smtp_login, smtp_password, smtpsrv, port, tls, 
 							db_result_str+=result
 					if cve_id not in db_result_str:
 						time.sleep(15)
-						nvd_base_url = "https://services.nvd.nist.gov/rest/json/cve/1.0/"
+						nvd_base_url = "https://services.nvd.nist.gov/rest/json/cves/2.0/"
 						nvd_query = nvd_base_url+cve_id
 						nvd_response = requests.get(url=nvd_query)
 						nvd_data = nvd_response.json()
